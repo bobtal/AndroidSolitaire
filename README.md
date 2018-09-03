@@ -1,0 +1,2 @@
+### A Solitaire Android app in Kotlin created through the Kotlin and Anko course on [Treehouse](https://teamtreehouse.com/library/kotlin-and-anko). 
+Builds up on the [Kotlin code](https://github.com/bobtal/Solitaire) from a preceding course Kotlin for Java Developers.
