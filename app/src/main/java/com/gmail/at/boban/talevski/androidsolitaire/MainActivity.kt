@@ -1,5 +1,6 @@
 package com.gmail.at.boban.talevski.androidsolitaire
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -12,6 +13,10 @@ fun View.getResIdForCard(card: Card): Int {
     val resourceName = "card${card.suit}${cardsMap[card.value]}".toLowerCase()
     return context.resources.getIdentifier(resourceName, "drawable", context.packageName)
 }
+val Context.cardWidth: Int
+        get() = (displayMetrics.widthPixels - dip(8)) / 7
+val Context.cardHeight: Int
+        get() = cardWidth * 190 / 140
 
 class MainActivity : AppCompatActivity(), GameView {
 
@@ -24,9 +29,6 @@ class MainActivity : AppCompatActivity(), GameView {
 
         GamePresenter.setGameView(this)
         GameModel.resetGame()
-
-        val cardWidth = (displayMetrics.widthPixels - dip(8)) / 7
-        val cardHeight = cardWidth * 190 / 140
 
         verticalLayout {
             leftPadding = dip(4)
