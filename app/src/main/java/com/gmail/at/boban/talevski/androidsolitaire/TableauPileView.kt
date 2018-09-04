@@ -2,9 +2,7 @@ package com.gmail.at.boban.talevski.androidsolitaire
 
 import android.content.Context
 import android.view.ViewManager
-import android.widget.RelativeLayout
 import org.jetbrains.anko._RelativeLayout
-import org.jetbrains.anko.collections.forEachByIndex
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.dip
 import org.jetbrains.anko.imageResource
